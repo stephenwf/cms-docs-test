@@ -4,19 +4,46 @@
   "description": "Describe cms-docs here",
   "private": true,
   "scripts": {
-    "build": "nwb build-web-app",
-    "clean": "nwb clean-app",
-    "start": "nwb serve-web-app --reload",
-    "test": "nwb test",
-    "test:coverage": "nwb test --coverage",
-    "test:watch": "nwb test --server"
+    "build": "npm-run-all build-templates build-assets",
+    "build-assets": "nwb build-web-app src dist/assets --color",
+    "build-docs": "fesk-metalsmith documentation --color",
+    "clean": "nwb clean-app src dist/assets",
+    "start": "run-p watch serve",
+    "serve": "fesk-live-server",
+    "watch": "NODE_ENV=development npm-watch"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "nwb": "0.18.x"
+    "@fesk/live-server-plugin": "0.0.1",
+    "@fesk/plugin-documentation": "0.0.1",
+    "@fesk/plugin-metalsmith": "0.0.1",
+    "css-reset-and-normalize-sass": "^0.1.2",
+    "npm-run-all": "^4.1.2",
+    "npm-watch": "^0.3.0",
+    "nwb": "0.21.5",
+    "nwb-sass": "^0.8.4"
   },
   "author": "",
   "license": "MIT",
-  "repository": ""
+  "repository": "",
+  "watch": {
+    "build-docs": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "md,html,twig"
+    },
+    "build-assets": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,scss"
+    }
+  },
+  "fesk": {
+    "metalsmith": {
+      "root": true,
+      "source": "src"
+    }
+  }
 }
