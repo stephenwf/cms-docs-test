@@ -1,7 +1,7 @@
 ---
 name: testing 2
 title: testing
-layout: default
+layout: layouts/default.twig
 order: '02'
 ---
 testing this post

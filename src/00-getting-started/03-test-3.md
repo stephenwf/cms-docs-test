@@ -1,7 +1,7 @@
 ---
 name: test 3 name
 title: test 3
-layout: default
+layout: layouts/default.twig
 order: '03'
 ---
 testing number 3
