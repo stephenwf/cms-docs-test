@@ -4,9 +4,10 @@
   "description": "Describe cms-docs here",
   "private": true,
   "scripts": {
-    "build": "npm-run-all build-docs build-assets",
+    "build": "npm-run-all build-docs build-assets build-admin",
     "build-assets": "nwb build-web-app src dist/assets --color",
     "build-docs": "fesk-metalsmith documentation --color",
+    "build-admin": "cp -R ./admin ./dist",
     "clean": "nwb clean-app src dist/assets",
     "start": "run-p watch serve",
     "serve": "fesk-live-server",
