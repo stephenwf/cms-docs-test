@@ -15,7 +15,7 @@ collections:
       - {label: "Short name", name: "title", widget: "string"}
       - label: "Layout"
         name: "layout"
-        default: "default"
+        default: "layouts/default.twig"
         widget: "select"
         options:
           - { label: "Default template", value: "layouts/default.twig" }
