@@ -1,4 +1,5 @@
 ---
+name: testing 2
 title: testing
 layout: default
 order: '02'
