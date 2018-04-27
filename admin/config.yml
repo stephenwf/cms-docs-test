@@ -12,7 +12,7 @@ collections:
     filter: {field: "folder", value: "00-getting-started"}
     slug: "{{order}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Name of post", name: "name", widget: "string"}
+      - {label: "Name of post", name: "title", widget: "string"}
       - label: "Layout"
         name: "layout"
         default: "default"
