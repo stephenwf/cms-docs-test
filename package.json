@@ -4,7 +4,7 @@
   "description": "Describe cms-docs here",
   "private": true,
   "scripts": {
-    "build": "npm-run-all build-templates build-assets",
+    "build": "npm-run-all build-docs build-assets",
     "build-assets": "nwb build-web-app src dist/assets --color",
     "build-docs": "fesk-metalsmith documentation --color",
     "clean": "nwb clean-app src dist/assets",
