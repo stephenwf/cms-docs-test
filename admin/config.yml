@@ -18,6 +18,6 @@ collections:
         default: "default"
         widget: "select"
         options:
-          - { label: "Default template", value: "default.twig" }
+          - { label: "Default template", value: "layouts/default.twig" }
       - {label: "Order", name: "order", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
