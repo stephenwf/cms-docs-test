@@ -1,6 +1,6 @@
 ---
-name: test
-title: test
+name: Ville test
+title: test-ville
 layout: layouts/default.twig
 order: '1'
 ---
